@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+</head>
+
+<body>
+
+{{#each users}}
+
+
+
+<form style="padding: 10px" action='/delete' method="post" enctype="multipart/form-data" style="margin-top: 20px">
+
+
+    <div class="container">
+        <div class="row" style="display: inline-flex">
+
+            <div class="col-md-6">
+
+                <div style="display: inline;display: flex;">
+                    <input name="id" value="{{this._id}}" type="hidden"  style="width: 300px;line-height: 1.5;">
+                </div>
+                <div style="display: inline;display: flex;">
+                    <h3 >Name :&nbsp;</h3>
+                    <h4 >{{this.name}}</h4>
+                </div>
+
+                <div style="display: inline;display: flex;">
+                    <h3 >Phone :&nbsp;</h3>
+                    <h4 >{{this.phone}}</h4>
+                </div>
+                <div style="display: inline;display: flex;">
+                    <h3 >Ngày Sinh:&nbsp;</h3>
+                    <h4 >{{this.DateOfBird}}</h4>
+                </div>
+                <div style="display: inline;display: flex;">
+                    <h3 >Giới Tính :&nbsp;</h3>
+                    <h4 >{{this.gioiTinh}}</h4>
+                </div>
+                <div style="display: inline;display: flex;">
+                    <h3 >Sở Thích :&nbsp;</h3>
+                    <h4 >{{this.soThich}}</h4>
+
+                </div>
+                <div style="display: inline;display: flex;">
+                    <h3 >Địa chỉ :&nbsp;</h3>
+                    <h4 >{{this.address}}</h4>
+
+                </div>
+
+
+
+                <button class="btn btn-primary" type="submit" >Delete</button>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</form>
+
+<form style="padding: 10px" action='/update' method="post"  enctype="multipart/form-data" >
+    <input name="ide" value="{{this._id}}" type="hidden" >
+
+    <button class="btn btn-primary" type="submit'"  >Update</button>
+
+</form>
+<div>___________________________________________________________________________________________-</div>
+{{/each}}
+
+
+</body>
+
+
+
+
+
+</html>
